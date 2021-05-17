@@ -39,9 +39,11 @@ bgImg.style.cssText = `background: url(img/bg.jpg) center center/cover no-repeat
 movieDB.movies.sort();
 // find names of movies
 const movieList = document.querySelector('.promo__interactive-list');
-// enter words form movieDB in index.html ul list
+// clear ul list on index.html
 movieList.innerHTML = '';
+// enter words form movieDB in index.html ul list
 movieDB.movies.forEach((film, i) => {
+    // create li tags with words and numbers
     movieList.innerHTML += `
     <li class="promo__interactive-item">${i + 1} ${film}
     <div class="delete"></div>
